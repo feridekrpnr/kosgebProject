@@ -2,14 +2,16 @@ package entities.concretes;
 
 public class Application {
     private int applicationId;
+    private String state;
     private Applicant applicant;
     private Credit credit;
 
     public Application() {
     }
 
-    public Application(int applicationId, Applicant applicant, Credit credit) {
+    public Application(int applicationId, String state, Applicant applicant, Credit credit) {
         this.applicationId = applicationId;
+        this.state = state;
         this.applicant = applicant;
         this.credit = credit;
     }
@@ -20,6 +22,14 @@ public class Application {
 
     public void setApplicationId(int applicationId) {
         this.applicationId = applicationId;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public Applicant getApplicant() {

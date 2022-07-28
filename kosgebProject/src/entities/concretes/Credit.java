@@ -1,6 +1,7 @@
 package entities.concretes;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Credit {
     private int creditId;
@@ -8,14 +9,17 @@ public class Credit {
     private LocalDate startedDate;
     private LocalDate dueDate;
 
+    private List<CreditFeature> creditFeatures;
+
     public Credit() {
     }
 
-    public Credit(int creditId, String creditName, LocalDate startedDate, LocalDate dueDate) {
+    public Credit(int creditId, String creditName, LocalDate startedDate, LocalDate dueDate, List<CreditFeature> creditFeatures) {
         this.creditId = creditId;
         this.creditName = creditName;
         this.startedDate = startedDate;
         this.dueDate = dueDate;
+        this.creditFeatures = creditFeatures;
     }
 
     public int getCreditId() {
@@ -48,5 +52,13 @@ public class Credit {
 
     public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
+    }
+
+    public List<CreditFeature> getCreditFeatures() {
+        return creditFeatures;
+    }
+
+    public void setCreditFeatures(List<CreditFeature> creditFeatures) {
+        this.creditFeatures = creditFeatures;
     }
 }

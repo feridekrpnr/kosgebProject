@@ -21,6 +21,7 @@ public class Authority {
         this.authorityId = authorityId;
     }
 
+
     public String getAuthorityName() {
         return authorityName;
     }
